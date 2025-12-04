@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charlotte - Chat Widget Integration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .code-block {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .warning {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 Portugal Residency PRO Chat Widget - Deployment Guide</h1>
+    
+    <h2>📋 Step 1: Upload Widget Files</h2>
+    <p>Upload the following files to your website's server:</p>
+    <div class="code-block">
+        <strong>Files to upload:</strong><br>
+        • themes/w/widget.min.js (59.2 KiB)<br>
+        • server.js (backend server)<br>
+        • package.json (dependencies)<br>
+        • .env (environment variables)
+    </div>
+
+    <h2>🔧 Step 2: Server Configuration</h2>
+    <p>Set up your production server with Node.js and configure environment variables:</p>
+    
+    <div class="code-block">
+        <strong>Production .env file:</strong><br>
+        NODE_PORT=5000<br>
+        NODE_ENV=production<br>
+        OPENAI_API_KEY=your_openai_key<br>
+        ASSISTANT_ID=asst_jWyNBEdOI1ZD0bk2nGQZmxt9<br>
+        EMAIL_SERVICE=gmail<br>
+        EMAIL_USER=Herringtonconsulting@gmail.com<br>
+        EMAIL_PASSWORD=your_app_password<br>
+        EMAIL_FROM=Herringtonconsulting@gmail.com<br>
+        EMAIL_TO=Herringtonconsulting@gmail.com<br>
+        WEBHOOK_URL=your_webhook_url<br>
+        SOCKET_CORS_ORIGIN=https://portugalresidency.pro
+    </div>
+
+    <h2>🌐 Step 3: Website Integration</h2>
+    <p>Add this code to your <span class="highlight">portugalresidency.pro</span> website:</p>
+    
+    <div class="code-block">
+        &lt;!-- Portugal Residency PRO Chat Widget --&gt;<br>
+        &lt;script defer src="https://your-server-domain.com/themes/w/widget.min.js"&gt;&lt;/script&gt;<br>
+        &lt;div id="portugal-residency-chatbot-widget"&gt;&lt;/div&gt;<br>
+        &lt;script&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;window.onload = () =&gt; {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;widget = window.GreeterWidget("6347b4e595cf065c9388f4ab");<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;};<br>
+        &lt;/script&gt;
+    </div>
+
+    <h2>⚡ Step 4: Hosting Options</h2>
+    
+    <h3>Option A: VPS/Cloud Server (Recommended)</h3>
+    <div class="success">
+        <strong>Best for:</strong> Full control, custom domain, SSL certificate<br>
+        <strong>Providers:</strong> DigitalOcean, AWS EC2, Google Cloud, Linode<br>
+        <strong>Cost:</strong> $5-20/month
+    </div>
+    
+    <h3>Option B: Platform-as-a-Service</h3>
+    <div class="success">
+        <strong>Best for:</strong> Easy deployment, automatic scaling<br>
+        <strong>Providers:</strong> Heroku, Railway, Render, Vercel<br>
+        <strong>Cost:</strong> $7-25/month
+    </div>
+
+    <h2>🔒 Step 5: SSL Certificate</h2>
+    <p>Ensure your server has SSL certificate for secure WebSocket connections:</p>
+    <div class="code-block">
+        <strong>Let's Encrypt (Free):</strong><br>
+        sudo certbot --nginx -d your-domain.com<br><br>
+        <strong>Or use Cloudflare (Free SSL):</strong><br>
+        • Add your domain to Cloudflare<br>
+        • Enable SSL/TLS encryption<br>
+        • Update DNS records
+    </div>
+
+    <h2>📱 Step 6: Mobile Optimization</h2>
+    <p>The widget is already mobile-responsive. Test on different devices:</p>
+    <div class="code-block">
+        <strong>Test URLs:</strong><br>
+        • Desktop: https://portugalresidency.pro<br>
+        • Mobile: Use browser dev tools<br>
+        • Tablet: Test various screen sizes
+    </div>
+
+    <h2>🧪 Step 7: Testing</h2>
+    <div class="warning">
+        <strong>Before going live, test:</strong><br>
+        • Chat functionality<br>
+        • Email sending<br>
+        • WebSocket connections<br>
+        • Mobile responsiveness<br>
+        • SSL certificate
+    </div>
+
+    <h2>📊 Step 8: Monitoring</h2>
+    <p>Set up monitoring for your production server:</p>
+    <div class="code-block">
+        <strong>Monitoring tools:</strong><br>
+        • PM2 (process manager)<br>
+        • Uptime monitoring<br>
+        • Error logging<br>
+        • Performance metrics
+    </div>
+
+    <h2>🎯 Integration Example</h2>
+    <p>Here's how it will look on your website:</p>
+    <div class="code-block">
+        &lt;!-- Add before &lt;/body&gt; tag --&gt;<br>
+        &lt;script defer src="https://chat.portugalresidency.pro/widget.min.js"&gt;&lt;/script&gt;<br>
+        &lt;div id="portugal-residency-chatbot-widget"&gt;&lt;/div&gt;<br>
+        &lt;script&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;window.onload = () =&gt; {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;widget = window.GreeterWidget("6347b4e595cf065c9388f4ab");<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;};<br>
+        &lt;/script&gt;
+    </div>
+
+    <div class="success">
+        <strong>✅ Ready to deploy!</strong><br>
+        Your Portugal Residency PRO chat widget is ready for production integration.
+    </div>
+</body>
+</html>

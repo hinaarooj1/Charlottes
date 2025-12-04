@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: portugal-residency-widget
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: ASSISTANT_ID
+        value: asst_jWyNBEdOI1ZD0bk2nGQZmxt9
+      - key: EMAIL_SERVICE
+        value: gmail
+      - key: EMAIL_USER
+        value: Herringtonconsulting@gmail.com
+      - key: EMAIL_PASSWORD
+        sync: false
+      - key: EMAIL_FROM
+        value: Herringtonconsulting@gmail.com
+      - key: EMAIL_TO
+        value: Herringtonconsulting@gmail.com
+      - key: WEBHOOK_URL
+        value: https://n8n.srv917741.hstgr.cloud/webhook/ac21fa0b-ad69-45bf-857b-4bce97ea14bd
+      - key: SOCKET_CORS_ORIGIN
+        value: https://portugalresidency.pro

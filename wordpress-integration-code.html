@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordPress Integration Code</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        .code-block { 
+            background: #f4f4f4; 
+            padding: 15px; 
+            border-radius: 5px; 
+            border-left: 4px solid #a60316;
+            font-family: monospace;
+            white-space: pre-wrap;
+            margin: 15px 0;
+        }
+        .method { 
+            background: #fff3cd; 
+            padding: 15px; 
+            border-radius: 5px; 
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+        h1 { color: #a60316; }
+        h2 { color: #333; margin-top: 30px; }
+        .step { background: #d1ecf1; padding: 10px; margin: 10px 0; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <h1>🇵🇹 WordPress Integration Code for Portugal Residency PRO Chatbot</h1>
+    
+    <div class="method">
+        <h2>📋 Method 1: Add to Footer (Recommended)</h2>
+        <div class="step">
+            <strong>Step 1:</strong> Go to WordPress Admin → Appearance → Theme Editor → footer.php
+        </div>
+        <div class="step">
+            <strong>Step 2:</strong> Add this code just before the closing &lt;/body&gt; tag:
+        </div>
+        <div class="code-block"><!-- Portugal Residency PRO Chatbot -->
+&lt;script defer src="https://portugalresidency-chatbot.onrender.com/themes/w/widget.min.js"&gt;&lt;/script&gt;
+&lt;div id="portugal-residency-chatbot-widget"&gt;&lt;/div&gt;
+&lt;script&gt;
+  window.onload = () =&gt; {
+    widget = window.GreeterWidget("6347b4e595cf065c9388f4ab");
+  };
+&lt;/script&gt;
+&lt;!-- End Portugal Residency PRO Chatbot --&gt;</div>
+        <div class="step">
+            <strong>Step 3:</strong> Click "Update File" to save
+        </div>
+    </div>
+
+    <div class="method">
+        <h2>📋 Method 2: Add to Header</h2>
+        <div class="step">
+            <strong>Step 1:</strong> Go to WordPress Admin → Appearance → Theme Editor → header.php
+        </div>
+        <div class="step">
+            <strong>Step 2:</strong> Add this code just before the closing &lt;/head&gt; tag:
+        </div>
+        <div class="code-block"><!-- Portugal Residency PRO Chatbot -->
+&lt;script defer src="https://portugalresidency-chatbot.onrender.com/themes/w/widget.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.onload = () =&gt; {
+    widget = window.GreeterWidget("6347b4e595cf065c9388f4ab");
+  };
+&lt;/script&gt;
+&lt;!-- End Portugal Residency PRO Chatbot --&gt;</div>
+        <div class="step">
+            <strong>Step 3:</strong> Add widget container anywhere you want it:
+        </div>
+        <div class="code-block">&lt;div id="portugal-residency-chatbot-widget"&gt;&lt;/div&gt;</div>
+    </div>
+
+    <div class="method">
+        <h2>📋 Method 3: Using Plugins</h2>
+        <div class="step">
+            <strong>Option A:</strong> Install "Insert Headers and Footers" plugin
+        </div>
+        <div class="step">
+            <strong>Option B:</strong> Use "Custom HTML" widget in Appearance → Widgets
+        </div>
+    </div>
+
+    <h2>🎨 Optional: Custom Positioning CSS</h2>
+    <div class="code-block">&lt;style&gt;
+#portugal-residency-chatbot-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+&lt;/style&gt;</div>
+
+    <h2>📱 Mobile Optimization CSS</h2>
+    <div class="code-block">&lt;style&gt;
+@media (max-width: 768px) {
+  #portugal-residency-chatbot-widget {
+    bottom: 10px;
+    right: 10px;
+  }
+}
+&lt;/style&gt;</div>
+
+    <div class="method">
+        <h2>✅ After Integration</h2>
+        <p>Your visitors will see:</p>
+        <ul>
+            <li>🇵🇹 Sofia chat widget in bottom-right corner</li>
+            <li>💬 Portugal Golden Visa expertise</li>
+            <li>📧 Email collection for leads</li>
+            <li>🎨 Professional branding with Portugal colors</li>
+        </ul>
+    </div>
+
+    <h2>🔧 Troubleshooting</h2>
+    <div class="step">
+        <strong>If widget doesn't appear:</strong>
+        <ul>
+            <li>Check browser console for errors</li>
+            <li>Clear cache (if using caching plugins)</li>
+            <li>Test in incognito mode</li>
+            <li>Verify widget URL: https://portugalresidency-chatbot.onrender.com/themes/w/widget.min.js</li>
+        </ul>
+    </div>
+
+    <div class="method">
+        <h2>📞 Support</h2>
+        <p><strong>Email:</strong> Herringtonconsulting@gmail.com</p>
+        <p><strong>Phone:</strong> (234) 109-6666</p>
+        <p><strong>Website:</strong> https://portugalresidency.pro/</p>
+    </div>
+</body>
+</html>
