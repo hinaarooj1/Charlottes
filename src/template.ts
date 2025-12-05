@@ -5,10 +5,10 @@ export function createTemplate(WidgetData: any) {
   const WIDGET_WIDTH = "380px";
   const WIDGET_HEIGHT = "600px";
 
-  // Sofia's avatar using the provided URL
+  // Sofia's avatar using local image
   const Sofia_AVATAR = `
     <img 
-      src="https://files-cdn.chatway.app/1GbfCaeyiIRtZI8wTQVCIDPmwTIwCtmDvXJTrasQ0bEtI1RU_88x88.jpg" 
+      src="/themes/w/avatar.jpg" 
       alt="Sofia" 
       class="avatar"
     />
@@ -437,7 +437,7 @@ export function createTemplate(WidgetData: any) {
 
  <div id="messages-container">
         <div class="hero_heading">
-        <img src="https://files-cdn.chatway.app/1GbfCaeyiIRtZI8wTQVCIDPmwTIwCtmDvXJTrasQ0bEtI1RU_88x88.jpg" alt="Sofia" class="center_img" />
+        <img src="/themes/w/avatar.jpg" alt="Sofia" class="center_img" />
         <h4 class="main_heading">Sofia</h4>
         <p class="main_para">joined</p>
         </div>

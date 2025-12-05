@@ -726,7 +726,7 @@ export default async function createWidget(wg_id: string) {
             if (messagesContainer) {
               messagesContainer.innerHTML = `
                 <div class="hero_heading">
-                  <img src="https://files-cdn.chatway.app/1GbfCaeyiIRtZI8wTQVCIDPmwTIwCtmDvXJTrasQ0bEtI1RU_88x88.jpg" alt="Andrist" class="center_img" />
+                  <img src="/themes/w/avatar.jpg" alt="Andrist" class="center_img" />
                   <h4 class="main_heading">${this.assistantName}</h4>
                   <p class="main_para">joined</p>
                 </div>
@@ -818,7 +818,7 @@ export default async function createWidget(wg_id: string) {
           if (messagesContainer) {
             messagesContainer.innerHTML = `
               <div class="hero_heading">
-                <img src="https://files-cdn.chatway.app/1GbfCaeyiIRtZI8wTQVCIDPmwTIwCtmDvXJTrasQ0bEtI1RU_88x88.jpg" alt="Andrist" class="center_img" />
+                <img src="/themes/w/avatar.jpg" alt="Andrist" class="center_img" />
                 <h4 class="main_heading">${this.assistantName}</h4>
                 <p class="main_para">joined</p>
               </div>
@@ -869,7 +869,7 @@ export default async function createWidget(wg_id: string) {
             if (messagesContainer) {
               messagesContainer.innerHTML = `
                 <div class="hero_heading">
-                  <img src="https://files-cdn.chatway.app/1GbfCaeyiIRtZI8wTQVCIDPmwTIwCtmDvXJTrasQ0bEtI1RU_88x88.jpg" alt="Andrist" class="center_img" />
+                  <img src="/themes/w/avatar.jpg" alt="Andrist" class="center_img" />
                   <h4 class="main_heading">${this.assistantName}</h4>
                   <p class="main_para">joined</p>
                 </div>
@@ -961,8 +961,7 @@ export default async function createWidget(wg_id: string) {
 
       if (isBotMessage) {
         const avatarImg = document.createElement("img");
-        avatarImg.src =
-          "https://files-cdn.chatway.app/1GbfCaeyiIRtZI8wTQVCIDPmwTIwCtmDvXJTrasQ0bEtI1RU_88x88.jpg";
+        avatarImg.src = "/themes/w/avatar.jpg";
         avatarImg.alt = this.assistantName;
         avatarImg.className = "avatar";
         messageWrapper.appendChild(avatarImg);
@@ -1029,8 +1028,7 @@ export default async function createWidget(wg_id: string) {
         indicator.className = "message-wrapper typing-indicator";
 
         const avatarImg = document.createElement("img");
-        avatarImg.src =
-          "https://files-cdn.chatway.app/1GbfCaeyiIRtZI8wTQVCIDPmwTIwCtmDvXJTrasQ0bEtI1RU_88x88.jpg";
+        avatarImg.src = "/themes/w/avatar.jpg";
         avatarImg.alt = this.assistantName;
         avatarImg.className = "avatar";
         indicator.appendChild(avatarImg);
