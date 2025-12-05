@@ -369,7 +369,7 @@ app.get('/', (req, res) => {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portugal Residency PRO Chatbot</title>
+        <title>Charlotte</title>
         <style>
             body { 
                 font-family: Arial, sans-serif; 
@@ -417,7 +417,7 @@ app.get('/', (req, res) => {
     </head>
     <body>
         <div class="container">
-            <h1>🇵🇹 Portugal Residency PRO Chatbot</h1>
+            <h1>🇵🇹 Charlotte</h1>
             <div class="status">
                 ✅ <strong>Server Status:</strong> Live and Running
             </div>
@@ -1698,7 +1698,7 @@ setInterval(() => {
 
 // Start server
 server.listen(PORT, '0.0.0.0', () => {
-  console.log(`🚀 Portugal Residency PRO Chatbot running on http://0.0.0.0:${PORT}`);
+  console.log(`🚀 Charlotte running on http://0.0.0.0:${PORT}`);
   console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
   console.log(`🤖 Assistant ID: ${process.env.ASSISTANT_ID}`);
   // Warm assistant-config cache on startup (non-blocking)
