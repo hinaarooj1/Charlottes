@@ -51,7 +51,8 @@ async function getAssistantConfig() {
     const assistant = await Promise.race([fetchPromise, timeoutPromise]);
     
     // Parse the instructions to extract structured data
-    const config = parseAssistantInstructions(assistant.instructions);
+    // Pass both the assistant object (for name) and instructions (for other data)
+    const config = parseAssistantInstructions(assistant.instructions, assistant);
     
     // Cache the result
     assistantConfigCache = config;
@@ -77,11 +78,37 @@ async function getAssistantConfig() {
 /**
  * Parse assistant instructions to extract structured data
  */
-function parseAssistantInstructions(instructions) {
+function parseAssistantInstructions(instructions, assistant = null) {
   console.log("🔍 Parsing assistant instructions...");
   
+  // Extract name from assistant object first, then try to parse from instructions
+  let extractedName = DEFAULT_ASSISTANT_NAME;
+  
+  // Priority 1: Use assistant.name from OpenAI API
+  if (assistant && assistant.name) {
+    extractedName = assistant.name;
+    console.log("📝 Using assistant name from API:", extractedName);
+  } else {
+    // Priority 2: Try to extract name from instructions
+    // Look for patterns like "You are [Name]", "My name is [Name]", "I am [Name]"
+    const namePatterns = [
+      /(?:You are|I am|My name is)\s+([A-Z][a-zA-Z\s\-]+?)(?:\s+from|\s+at|\s+for|\.|,|\n|$)/i,
+      /(?:You are|I am|My name is)\s+([A-Z][a-zA-Z\s\-]+?)(?:\s+an|\s+a|\s+the|\.|,|\n|$)/i,
+      /Name:\s*([A-Z][a-zA-Z\s\-]+?)(?:\n|$)/i,
+    ];
+    
+    for (const pattern of namePatterns) {
+      const match = instructions.match(pattern);
+      if (match && match[1]) {
+        extractedName = match[1].trim();
+        console.log("📝 Extracted name from instructions:", extractedName);
+        break;
+      }
+    }
+  }
+  
   const config = {
-    name: DEFAULT_ASSISTANT_NAME,
+    name: extractedName,
     website: DEFAULT_WEBSITE,
     services: [],
     contact: {},
