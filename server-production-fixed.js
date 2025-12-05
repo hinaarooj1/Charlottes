@@ -181,7 +181,7 @@ app.get('/', (req, res) => {
             
             <div class="integration-code">
                 <strong>Integration Code for your website:</strong><br><br>
-                &lt;script defer src="https://portugalresidency-chatbot.onrender.com/themes/w/widget.min.js"&gt;&lt;/script&gt;<br>
+                &lt;script defer src="https://charlottes.onrender.com/themes/w/widget.min.js"&gt;&lt;/script&gt;<br>
                 &lt;div id="portugal-residency-chatbot-widget"&gt;&lt;/div&gt;<br>
                 &lt;script&gt;<br>
                 &nbsp;&nbsp;window.onload = () => {<br>

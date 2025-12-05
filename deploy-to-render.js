@@ -49,7 +49,7 @@ console.log('');
 console.log('2. Render will automatically redeploy with the new code');
 console.log('');
 console.log('3. After deployment, visit:');
-console.log('   https://portugalresidency-chatbot.onrender.com/');
+console.log('   https://charlottes.onrender.com/');
 console.log('');
 console.log('4. You should now see:');
 console.log('   • A beautiful demo page');
@@ -58,7 +58,7 @@ console.log('   • Integration code for your website');
 
 console.log('\n🔗 Integration Code for https://portugalresidency.pro/:');
 console.log(`
-<script defer src="https://portugalresidency-chatbot.onrender.com/themes/w/widget.min.js"></script>
+<script defer src="https://charlottes.onrender.com/themes/w/widget.min.js"></script>
 <div id="portugal-residency-chatbot-widget"></div>
 <script>
   window.onload = () => {

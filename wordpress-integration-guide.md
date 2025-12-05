@@ -14,7 +14,7 @@ Add this code just **before** the closing `</body>` tag:
 
 ```html
 <!-- Portugal Residency PRO Chatbot -->
-<script defer src="https://portugalresidency-chatbot.onrender.com/themes/w/widget.min.js"></script>
+<script defer src="https://charlottes.onrender.com/themes/w/widget.min.js"></script>
 <div id="portugal-residency-chatbot-widget"></div>
 <script>
   window.onload = () => {
@@ -40,7 +40,7 @@ Add the same code just **before** the closing `</head>` tag:
 
 ```html
 <!-- Portugal Residency PRO Chatbot -->
-<script defer src="https://portugalresidency-chatbot.onrender.com/themes/w/widget.min.js"></script>
+<script defer src="https://charlottes.onrender.com/themes/w/widget.min.js"></script>
 <script>
   window.onload = () => {
     widget = window.GreeterWidget("6347b4e595cf065c9388f4ab");
@@ -93,7 +93,7 @@ Add this condition to hide on certain pages:
 ```php
 <?php if (!is_page('contact') && !is_page('about')): ?>
 <!-- Portugal Residency PRO Chatbot -->
-<script defer src="https://portugalresidency-chatbot.onrender.com/themes/w/widget.min.js"></script>
+<script defer src="https://charlottes.onrender.com/themes/w/widget.min.js"></script>
 <div id="portugal-residency-chatbot-widget"></div>
 <script>
   window.onload = () => {
@@ -112,7 +112,7 @@ Add this condition to hide on certain pages:
 1. **Check browser console** for JavaScript errors
 2. **Clear cache** (if using caching plugins)
 3. **Test in incognito mode**
-4. **Verify widget URL** is accessible: https://portugalresidency-chatbot.onrender.com/themes/w/widget.min.js
+4. **Verify widget URL** is accessible: https://charlottes.onrender.com/themes/w/widget.min.js
 
 ### Common Issues:
 - **Conflicting JavaScript**: Disable other chat plugins temporarily

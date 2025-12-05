@@ -77,7 +77,7 @@ git push
 ✅ Added connection cleanup
 
 ## Testing After Deployment
-1. Visit: https://portugalresidency-chatbot.onrender.com
+1. Visit: https://charlottes.onrender.com
 2. Open browser console (F12)
 3. Send a message
 4. Check for:

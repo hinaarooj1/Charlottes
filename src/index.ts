@@ -592,7 +592,7 @@ export default async function createWidget(wg_id: string) {
         // Use Render server URL for production, localhost for development
         const serverUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
           ? "http://localhost:5000" 
-          : "https://portugalresidency-chatbot.onrender.com";
+          : "https://charlottes.onrender.com";
           
         // iOS-specific connection options
         const isIOS = /iPad|iPhone|iPod/.test(window.navigator.userAgent);
@@ -842,7 +842,7 @@ export default async function createWidget(wg_id: string) {
       try {
         const serverUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
           ? "http://localhost:5000" 
-          : "https://portugalresidency-chatbot.onrender.com";
+          : "https://charlottes.onrender.com";
         const res = await fetch(`${serverUrl}/api/session/${this.sessionId}`);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const json = await res.json();
@@ -894,7 +894,7 @@ export default async function createWidget(wg_id: string) {
       try {
         const serverUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
           ? "http://localhost:5000" 
-          : "https://portugalresidency-chatbot.onrender.com";
+          : "https://charlottes.onrender.com";
         const res = await fetch(`${serverUrl}/api/assistant-info`);
         if (res.ok) {
           const data = await res.json();
