@@ -108,6 +108,24 @@ function cleanResponse(response) {
 
 // Middleware
 app.use(express.json());
+
+// Middleware to set correct MIME type for images
+app.use((req, res, next) => {
+  if (req.path.match(/\.(jpg|jpeg|png|gif|webp)$/i)) {
+    const ext = req.path.split('.').pop().toLowerCase();
+    const mimeTypes = {
+      'jpg': 'image/jpeg',
+      'jpeg': 'image/jpeg',
+      'png': 'image/png',
+      'gif': 'image/gif',
+      'webp': 'image/webp'
+    };
+    res.setHeader('Content-Type', mimeTypes[ext] || 'image/jpeg');
+    res.setHeader('Cache-Control', 'public, max-age=31536000'); // Cache for 1 year
+  }
+  next();
+});
+
 app.use(express.static('public'));
 app.use('/themes', express.static('themes'));
 

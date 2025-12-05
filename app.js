@@ -29,6 +29,23 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true, limit: "100mb" }));
 app.use(cors({ origin: "*" }));
+
+// Middleware to set correct MIME type for images
+app.use((req, res, next) => {
+  if (req.path.match(/\.(jpg|jpeg|png|gif|webp)$/i)) {
+    const ext = req.path.split('.').pop().toLowerCase();
+    const mimeTypes = {
+      'jpg': 'image/jpeg',
+      'jpeg': 'image/jpeg',
+      'png': 'image/png',
+      'gif': 'image/gif',
+      'webp': 'image/webp'
+    };
+    res.setHeader('Content-Type', mimeTypes[ext] || 'image/jpeg');
+  }
+  next();
+});
+
 app.use("/public", express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "themes/")));
 
